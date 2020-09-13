@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+    각각의 단을 콘솔에, html 화면에 구현    
+    </p>
+    
+    출력할 단수: <input type="text" id="number"><br>
+    <button onclick="rungugudan()">확인</button>
+    <h2> 구구단  구현 </h2>
+    <script>
+    function rungugudan(){
+        var n;
+        //몇단을 출력할지
+        //var strn = Number(prompt("which number?"));
+        var strn = document.getElementById("number").value;
+        var number = strn;
+    if (number<2 || number>9){
+        document.write("2이상 9이하의 수를 입력하세요");
+    }else {
+
+    
+        for(n=1; n<10; n++){
+            var result2 = n* number;
+            console.log(n + " * "+number+" = "+ result2);
+
+        }
+        var n;
+        for(n=1; n<10; n++){
+            var result2 = n*number;
+            document.write(n + " * "+number+" = "+ result2+"<br>");
+
+        }
+        }
+    }
+    </script>
+    
+</body>
+</html>
