@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>소수판별 프로그램</h1>
+    <script>
+
+
+    var isPrime = true;
+    var a=Number(prompt("소수인지 판별할 숫자입력(2이상)"));
+    for(var i =2; i < a; i++){
+        if(a%i ==0){
+            //document.write(n+"은 소수가 아닙니다.("+i+")");
+            isPrime = false;
+            break;
+        }
+        console.log(isPrime, i);
+    }
+    if (isPrime){
+        document.write(a+ " is prime num");
+    }
+    else{
+        document.write(a+ " is not prime num");
+    }
+
+    </script>
+
+
+</body>
+
+
+
+
+</html>
