@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>calculator</h2>
+
+    <div id = "output"> test  </div>
+    <script>
+
+        function calc() {
+
+            var n1 =  Number(prompt("1st number"));
+            var out = document.getElementById("output");
+            var result = n1;
+            var n = 2;
+
+
+            while (true){
+            var op = prompt("operator");
+
+            if (op === 'q'){
+                break;
+            }
+            var n2 = Number(prompt(n+"th number"));
+                n++;
+
+            
+            if (op == '+'){
+                result += n2;
+
+            } else if (op === '-'){
+                result -= n2;
+
+            } else if (op === '*') {
+                result *= n2;
+
+            } else if(op === '/'){
+                result /= n2;
+
+            } else {
+                result = "error"; 
+                break;
+            }
+
+            }
+            
+            out.innerHTML = "final result is " +result;
+
+
+    };
+
+    calc();
+    </script>
+
+</body>
+</html>       
