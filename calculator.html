@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>calculator</h2>
+
+ 
+
+    <div>
+        첫번째 수<input type = "text" id = "n1"> <br>
+        두번째 수<input type = "text" id = "n2"> <br>
+        <button onclick ="calc()"> 실행 </button>
+    </div>
+    <div id = "output"> test  </div>
+    <script>
+        function calc() {
+            var n1 = Number(document.getElementById('n1').value); 
+            var n2 = Number(document.getElementById('n2').value);
+            var out = document.getElementById("output");
+            var str = "";
+            str += "<h2>build calculator</h2>";
+
+            str += "summation: " + (n1 + n2) + "<br>";
+            str += "difference: " + (n1 - n2) + "<br>";
+            str += "multiplication: " + (n1 * n2) + "<br>";
+            str += "devide: " + (n1 / n2) + "<br>";
+            out.innerHTML = str;
+
+        };
+ 
+
+
+
+
+
+    </script>
+
+</body>
+</html>
