@@ -1,0 +1,96 @@
+<!-- function print()-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h2>calculator</h2>
+
+
+    <div id = "output"> test  </div>
+    <script>
+
+        var input = {
+            n : 2,
+            getFirstValue : function(){
+            var n1 =  Number(prompt("1st number"));
+            return n1;
+            },
+
+            getSecondValue : function(){
+            var n2 = Number(prompt(this.n+"th number"));
+            this.n++;
+            return n2;
+            },
+
+            getOperator : function(){
+                while (true){
+                    var op = prompt("operator");
+
+                    if (op === '+' || op === "-" || op == "*" || op == "/"|| op == "q"){
+                        break;
+                    }else {
+                        alert("not a correct operator");
+                    }
+                }           
+                return op;
+            }
+
+        };
+        
+        var calculator = {
+            calculate : function(first, second, op) {
+            var ret;
+            switch(op){
+                case "+":
+                    ret = first + second;
+                    break;
+                case "-":
+                ret = first - second;
+                    break;
+                case "*":
+                ret = first * second;
+                    break; 
+                case "/":
+                ret = first / second;
+                    break; 
+    
+            }
+            return ret;
+            }
+        };
+
+    var output = {
+        print: function(value){
+            return "The final result is " + value;
+        }
+    };
+
+
+        function main(){
+            var result = input.getFirstValue();
+            while(true) {
+                var op = input.getOperator();
+                if (op == "q") {
+                    break;
+                }
+                var num = input.getSecondValue();
+                var result = calculator.calculate(result, num, op);
+            }
+            var out = document.getElementById("output");
+        out.innerHTML = output.print(result);
+        };
+
+        main();
+
+
+    </script>
+
+</body>
+</html>       
